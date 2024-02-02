@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donuts landing page</title>
+    <!--font awesome cdn link-->
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+    <section>
+    <div class="circle"></div>
+        <header>
+            <a href="#" ><img src="images/donutsLogo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Whats new</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>
+                    Its not just donuts<br> Its<span>  MoonChild</span>
+                    <h3></h3>
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore cumque ratione, alias quis aliquid 
+                    possimus minima sint nemo laborum expedita saepe officia cum perferendis
+                    aperiam dolores laudantium facere illum officiis.
+                 </p>
+                 <button><a href="#"> PRESS ME PLEASE!! </a></button>
+            </div>
+                    <div class="imgBox">
+                        <img src="images/img2.png" class="moonchild">
+                    </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="images/img1.png" onclick="imgSlider('images/img1.png');changeCircleColor('#e6e6fa')"></li>
+                <li><img src="images/img2.png" onclick="imgSlider('images/img2.png');changeCircleColor('#e3dac9')"></li>
+                <li><img src="images/img3.png" onclick="imgSlider('images/img3.png');changeCircleColor('#bcdca4')"></li>
+               </ul>
+
+            <ul class="socials">
+                <li> <a href="#" class="fab fa-github"></a></li>
+                   
+                   <li><a href="#" class="fab fa-linkedin"></a></li> 
+                    <li><a href="#" class="fab fa-instagram"></a></li>
+                  <li> <a href="#" class="fab fa-twitter"></a></li> 
+                  <li> <a href="#" class="fab fa-pinterest"></a></li> 
+            </ul>
+              
+    </section>
+        <div class="credit">Created by <span> Ms Sthelo</span>| Sthe-ngid0 on Github & ngidisthelo@gmail.com </div>
+       
+    <script type="text/javascript">
+
+        function imgSlider(anything){
+            document.querySelector('.moonchild').src =anything;
+        }
+        function changeCircleColor(color){
+            const circle=document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function Greet(){
+        let name = prompt(" What is your name... ");
+        let fan = prompt(name + " What is your favourite donut brand");
+
+        if 
+        (fan == "moonchild")
+        {
+            let h3 = document.querySelector("h3");
+            h3.innerHTML = name + ", Thank you for being a valued customer❤️❤️";
+        }
+        else (fan != "moonchild")
+        let h3 = document.querySelector("h3");
+             h3.innerHTML = name+ " ,We cant wait to change your mind😉❤️";
+        }
+    
+        let GreetButton = document.querySelector("button");
+       GreetButton.addEventListener("click", Greet)
+
+    </script>
+</body>
+</html>
